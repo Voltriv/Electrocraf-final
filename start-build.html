@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Start Building a PC</title>
+  <link rel="stylesheet" href="start-build.css">
+  <link rel="shortcut icon" type="x-icon" href="Electrocraft.jpg">
+
+
+</head>
+
+<body class="">
+  <header>
+    <!--Heading-->
+<div class="container">
+  <nav>
+    <a href="main.html"><img id="logo" src="Electrocraft.jpg"></a>
+    <h1>ElectroCraft</h1>
+    <ul>
+      <li><a href="start-build.html">Builder</a></li>
+      <li><a href="guides.html">Guides</a></li>
+      <li><a href="Completed build.html">Completed Builds</a></li>
+    </ul>
+   
+  </nav>
+  <!--sA BAR NG START BUILDING-->
+  <div id="tidebar"><h3>Start Building your PC</h3></div>
+  <main class="">      
+    <div class="container-1">
+      <!--ITO YONG NSA GILID NA SIDEBAR-->
+      <div class="sidebar">    
+<!-- SEARCH BUTTON -->
+        <div id="search-container">
+          <input
+            type="search"
+            id="search-input"
+            placeholder="Search product name here.."
+          />
+          <button id="search">Search</button>
+        </div>
+        <!--ITO NAMAN YONG MGA BUTTON SA GILID-->
+        <div id="buttons">
+          <button class="button-value" onclick="filterProduct('all')">All</button>
+          <button class="button-value" onclick="filterProduct('Videocard')">
+            VideoCard
+          </button>
+          <button class="button-value" onclick="filterProduct('Storage')">
+            Storage
+          </button>
+          <button class="button-value" onclick="filterProduct('PowerSupply')">
+            PowerSupply
+          </button>
+          <button class="button-value" onclick="filterProduct('Case')">
+            Case
+          </button>
+          <button class="button-value" onclick="filterProduct('CPU-Cooler')">
+            CPU-Cooler
+          </button>
+          <button class="button-value" onclick="filterProduct('CPU')">
+            CPU
+          </button>
+          <button class="button-value" onclick="filterProduct('Peripherals')">
+            Peripherals
+          </button>
+          <button class="button-value" onclick="filterProduct('Memory')">
+            Memory
+          </button>
+          <button class="button-value" onclick="filterProduct('Monitor')">
+            Monitor
+          </button>
+          <button class="button-value" onclick="filterProduct('Motherboard')">
+            Motherboard
+          </button>
+        </div>
+    </div>
+    <!--ITO YONG SA MAIN PRODUCTS-->
+<div class="iframeContainer">
+  <div id="container-2">
+    <div id="products"></div>
+  </div>
+</div>
+  </main>
+</div>
+  <script src="stat.js"></script>
+
+</body>
+</html>

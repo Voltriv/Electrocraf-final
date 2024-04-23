@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Completed Build</title>
+  <link rel="stylesheet" href="com.css">
+  <link rel="shortcut icon" type="x-icon" href="Electrocraft.jpg">
+</head>
+
+<body>
+  <header>
+    <!--Heading-->
+<div class="container">
+  <nav>
+    <div class="logo-container">
+      <img id="logo" src="Electrocraft.jpg">
+      <h1>ElectroCraft</h1>
+    </div>
+    <ul>
+      <li><a href="start-build.html">Builder</a></li>
+      <li><a href="guides.html">Guides</a></li>
+      <li><a href="Completed build.html">Completed Builds</a></li>
+    </ul>
+  </nav>
+  <!-- COMPLETED BUILD YAN YONG RECTANGLE NYA-->
+  <div id="tidebar"><h3>Completed Build</h3></div>
+  <h1> Your Build</h1>
+  <main>
+    <!-- ITO NAMAN SA BOX BOX NA ANIM-->
+    <h2>Your Build</h2>
+    <div class="top-row">
+      <div class="box">
+        <div class="t">Video Card: <br><span id="text1"></span></div>
+        <div class="t">Storage: <br><span id="text2"></span></div>
+        <div class="t">Power Supply: <br><span id="text3"></span></div>
+        <div class="t">Case: <br><span id="text4"></span></div>
+        <div class="t">CPU Cooler: <br><span id="text5"></span></div>
+        <div class="t">CPU: <br><span id="text6"></span></div>
+        <div class="">Peripherals: <br><span id="text7"></span></div>
+        <div class="t">Memory: <br><span id="text8"></span></div>
+        <div class="t">Monitor: <br><span id="text9"></span></div>
+        <div class="t">Motherboard: <br><span id="text10"></span></div>
+
+        <button id="save-button" onclick="showalert()">Save</button> 
+      </div>
+      <!-- STANDBY CODE -->
+     <!--
+       <div class="box">
+        <p class="text"> Video Card: <br> </p>
+        <p class="text"> Storage: <br> </p>
+        <p class="text"> Power Supply: <br> </p>
+        <p class="text"> Case: <br> </p>
+        <p class="text"> CPU Cooler: <br> </p>
+        <p class="text"> CPU: <br> </p>
+        <p class="text"> Peripherals: <br> </p>
+        <p class="text"> Memory: <br> </p>
+        <p class="text"> Monitor: <br> </p>
+        <p class="text"> Motherboard: <br> </p>
+        <button class="save-button">Save</button> 
+      </div>
+      <div class="box">
+        <p class="text"> Video Card: <br> </p>
+        <p class="text"> Storage: <br> </p>
+        <p class="text"> Power Supply: <br> </p>
+        <p class="text"> Case: <br> </p>
+        <p class="text"> CPU Cooler: <br> </p>
+        <p class="text"> CPU: <br> </p>
+        <p class="text"> Peripherals: <br> </p>
+        <p class="text"> Memory: <br> </p>
+        <p class="text"> Monitor: <br> </p>
+        <p class="text"> Motherboard: <br> </p>
+        <button class="save-button">Save</button> 
+      </div>
+    </div>
+    <div class="bottom-row">
+      <div class="box">
+        <p class="text"> Video Card: <br> </p>
+        <p class="text"> Storage: <br> </p>
+        <p class="text"> Power Supply: <br> </p>
+        <p class="text"> Case: <br> </p>
+        <p class="text"> CPU Cooler: <br> </p>
+        <p class="text"> CPU: <br> </p>
+        <p class="text"> Peripherals: <br> </p>
+        <p class="text"> Memory: <br> </p>
+        <p class="text"> Monitor: <br> </p>
+        <p class="text"> Motherboard: <br> </p>
+        <button class="save-button">Save</button> 
+      </div>
+      <div class="box">
+        <p class="text"> Video Card: <br> </p>
+        <p class="text"> Storage: <br> </p>
+        <p class="text"> Power Supply: <br> </p>
+        <p class="text"> Case: <br> </p>
+        <p class="text"> CPU Cooler: <br> </p>
+        <p class="text"> CPU: <br> </p>
+        <p class="text"> Peripherals: <br> </p>
+        <p class="text"> Memory: <br> </p>
+        <p class="text"> Monitor: <br> </p>
+        <p class="text"> Motherboard: <br> </p>
+        <button class="save-button">Save</button> 
+      </div>
+      <div class="box">
+        <p class="text"> Video Card: <br> </p>
+        <p class="text"> Storage: <br> </p>
+        <p class="text"> Power Supply: <br> </p>
+        <p class="text"> Case: <br> </p>
+        <p class="text"> CPU Cooler: <br> </p>
+        <p class="text"> CPU: <br> </p>
+        <p class="text"> Peripherals: <br> </p>
+        <p class="text"> Memory: <br> </p>
+        <p class="text"> Monitor: <br> </p>
+        <p class="text"> Motherboard: <br> </p>
+        <button class="save-button">Save</button> 
+      </div> --> 
+    </div>
+  </main>
+ <script>
+
+  const text = localStorage.getItem('text1');
+  let text2 = localStorage.getItem('text2');
+
+/* pag tinanggal mo hashtag dito lalabas lahat yong nsa complete build*/
+
+  document.getElementById('text1').textContent = text;
+  document.getElementById('text2').textContent = text;
+  document.getElementById('text3').textContent = text;
+  document.getElementById('text4').textContent = text;
+  document.getElementById('text5').textContent = text;
+  document.getElementById('text6').textContent = text;
+  document.getElementById('text7').textContent = text;
+  document.getElementById('text8').textContent = text;
+  document.getElementById('text9').textContent = text;
+  document.getElementById('text10').textContent = text;
+
+    // Function to show an alert when the button is clicked
+    function showAlert() {
+    alert('Saved Build');
+  }
+  // Get the button element
+  var button = document.getElementById('save-button');
+
+  // Add a click event listener to the button
+  button.addEventListener('click', showAlert);
+ </script>
+  <footer></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,381 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+
+/* Grid Box */
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.4fr 0.2fr 1.2fr 0.2fr;
+  grid-template-areas:
+    "nav"
+    "tidebar"
+    "main"
+    "sidebar"
+    "cartTab"
+    "footer";
+  font-family: "inter", sans-serif;
+}
+/* Navbar */
+nav {
+  background: #393e3e;
+  grid-area: nav;
+  width: 100%;
+  max-width: 1440px; /* Added max-width for responsiveness */
+  height: 130px;
+  position: relative; /* Added position relative */
+}
+
+h1 {
+  color: #ffffff;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 700;
+  width: 212px;
+  position: absolute;
+  left: 90px;
+  top: 30.28px;
+}
+
+#logo {
+  border-radius: 50%;
+  border-style: solid;
+  height: 65.17px;
+  position: relative;
+  color: white;
+  left: 35px;
+  top: 10px;
+  object-fit: cover;
+}
+
+
+/* buttons sa header */
+ul {
+  position: absolute;
+  top: 6.5rem;
+  left: 38vh;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  position: relative;
+  display: block;
+  text-transform: uppercase;
+  margin: 20px 0;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  font-family: sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+ul li a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  transform: scaleY(2);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+ul li a:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  transform: scale(0);
+  opacity: 0;
+  transition: 0.3s;
+  z-index: -1;
+}
+
+ul li a:hover {
+  color: #000000;
+}
+
+ul li a:hover:before {
+  transform: scaleY(1);
+  opacity: 1;
+}
+
+ul li a:hover:after {
+  transform: scaleZ(1);
+  opacity: 1;
+}
+/* ito naman yong start your build*/
+
+#tidebar {
+  background: #666666;
+  grid-area: tidebar;
+  width: 100%;
+  max-width: 1440px; /* Added max-width for responsiveness */
+  height: 50px;
+}
+
+h3 {
+  text-align: center;
+  margin-top: 10px;
+  color: #ffffff;
+}
+
+a {
+  color: black;
+}
+
+main {
+  text-align: center;
+  grid-area: main;
+  width: 75%;
+  left: 25%;
+  display: block;
+}
+
+.container-1 {
+  display: flex;
+}
+/* SIDE BAR */
+
+.sidebar {
+  width: 300px;
+  height: 2500px;
+  padding: 25px;
+  background-color: #a7a7a7;
+  position: absolute;
+  grid-area: sidebar;
+}
+
+.sidebar>h3 {
+  color: #fff;
+  padding-left: 10px;
+}
+
+.filter {
+  margin-top: 0px;
+  padding: 40px;
+}
+
+.filter h3 {
+  margin-bottom: 30px;
+}
+
+#container-2 {
+  width: 75%;
+  left: 25%;
+  position: absolute;
+  display: flex;
+}
+
+/* SEARCHH BUTTON*/
+
+#search-container {
+  margin: 1em 0;
+}
+
+#search-container input {
+  background-color: transparent;
+  width: 40%;
+  border-bottom: 2px solid #110f29;
+  padding: 1em 0.3em;
+}
+
+#search-container input:focus {
+  border-bottom-color: grey;
+}
+
+#search-container button {
+  padding: 1em 2em;
+  margin-left: 1em;
+  background-color: grey;
+  color: #ffffff;
+  border-radius: 5px;
+  margin-top: 0.5em;
+}
+/*BUTTONS SA GEDLI*/
+
+.buttons {
+  position: absolute;
+  display: block;
+}
+
+.button-value {
+  width: 90%;
+  gap: 10px;
+  border: 2px solid grey;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 1em;
+  background-color: transparent;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.active {
+  background-color: grey;
+  color: #ffffff;
+}
+
+/* MAIN PRODUCT*/
+
+#products {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 15px;
+  position: flex;
+}
+
+.card {
+  width: 80%;
+  padding: 1em;
+  margin-bottom: 1px;
+  box-shadow: 2em 4em 10em grey;
+}
+
+.image-container {
+  text-align: center;
+}
+
+img {
+  max-width: 50%;
+  object-fit: contain;
+  height: 13em;
+}
+
+.container-0 {
+  color: #110f29;
+}
+
+.container-0 h5 {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.hide {
+  display: none;
+}
+
+.container-0 button {
+  height: 50px;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 720px) {
+  img {
+    max-width: 100%;
+    object-fit: contain;
+    height: 10em;
+  }
+
+  .card {
+    max-width: 10em;
+    margin-top: 1em;
+  }
+
+  #products {
+    grid-template-columns: auto auto;
+    grid-column-gap: 1em;
+  }
+}
+/* Existing CSS code here */
+
+@media only screen and (max-width: 992px) {
+  /* Adjust styles for medium-sized screens */
+  .listProduct {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* mobile */
+@media only screen and (max-width: 768px) {
+  /* Adjust styles for smaller screens */
+  .listProduct {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Additional adjustments for mobile screens */
+  nav {
+    height: 100px;
+  }
+
+  h1 {
+    font-size: 20px;
+    width: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20px;
+  }
+
+  #logo {
+    left: 10px;
+    top: 10px;
+    width: 50px;
+    height: 50px;
+  }
+
+  ul {
+    top: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .container {
+    grid-template-rows: 0.2fr 0.2fr 1.2fr 0.2fr; /* Adjust grid template rows */
+  }
+
+  nav {
+    height: 80px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  ul {
+    top: 2.5rem;
+  }
+}
+
+/* Custom media query for smaller laptops */
+@media only screen and (max-width: 1366px) {
+  /* Adjust styles for smaller laptops */
+}
+
+/* Custom media query for larger desktop screens */
+@media only screen and (min-width: 1600px) {
+  /* Adjust styles for larger desktop screens */
+}
+
+footer {
+  background: #393e3e;
+  grid-area: footer;
+  width: 100%;
+  max-width: 1440px; /* Added max-width for responsiveness */
+  height: 100px;
+  position: relative; /* Added position relative */
+}
